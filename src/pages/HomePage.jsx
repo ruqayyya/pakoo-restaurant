@@ -1,14 +1,16 @@
 import React from "react";
 import CustomSection from "../components/CustomSection";
 import MySwiper from "../components/mySwipper";
-
-// import Header from "../components/header";
+import About from "../components/About";
 
 const HomePage = () => {
   return (
     <>
       <CustomSection className={"homeSection"}>
-      <MySwiper/>
+        <div className="Aboutsec">
+          <About />
+          <MySwiper />
+        </div>
       </CustomSection>
     </>
   );

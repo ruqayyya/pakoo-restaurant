@@ -4,16 +4,16 @@
   .container {
     .navbar {
       align-items: center;
-
+      justify-content: space-around;
+      
       .logo{
         img{
           height: 150px;
         }
-
       }
       .navlist {
+
         justify-content: space-around;
-        padding: 20px 0;
         .item {
           font-size: 20px;
           text-transform: uppercase;
@@ -58,14 +58,6 @@
           }
         }
       }
-    }
-    .img {
-      width: 100%;
-      height: 200px;
-      background-image: url("../../images/large.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
     }
   }
 }
