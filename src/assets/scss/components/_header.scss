@@ -1,2 +1,71 @@
+.header {
+  width: 100%;
+  background-color: black;
+  .container {
+    .navbar {
+      align-items: center;
 
+      .logo{
+        img{
+          height: 150px;
+        }
 
+      }
+      .navlist {
+        justify-content: space-around;
+        padding: 20px 0;
+        .item {
+          font-size: 20px;
+          text-transform: uppercase;
+          a{
+            color: white;
+            position: relative;
+            &::before{
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: -2px;
+              background-color: white;
+               border-radius: 5px;
+               transform: scaleX(0);
+               transition: all 0.6s ease;
+            }
+            &:hover::before {
+              transform: scaleX(1); /* Add this to make it visible on hover */
+            }
+            &.active{
+              color: rgba(134,124,110,255);
+              &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                background-color: rgba(134,124,110,255);
+                 border-radius: 5px;
+                 transform: scaleX(0);
+                 transition:  0.6s ease;
+              }
+              &:hover::before {
+                transform: scaleX(1); /* Add this to make it visible on hover */
+              }
+
+              // &::before {
+              //   transform: scaleX(1); /* Ensure it's visible when the link is active */
+              // }
+            }
+          }
+        }
+      }
+    }
+    .img {
+      width: 100%;
+      height: 200px;
+      background-image: url("../../images/large.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
