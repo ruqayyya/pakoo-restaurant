@@ -1,66 +1,39 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/scrollbar";
-import "../assets/scss/components/_swipper.scss";
-import { Scrollbar } from "swiper/modules";
 
-import interyer from "../assets/images/Adsiz.png";
-import interyer1 from "../assets/images/adsiz1.png";
-import interyer2 from "../assets/images/adsiz2.png";
-import interyer3 from "../assets/images/adsiz3.png";
-import interyer4 from "../assets/images/adsiz4.png";
-import interyer5 from "../assets/images/adsiz5.png";
-import interyer6 from "../assets/images/adsiz6.png";
-import interyer7 from "../assets/images/adsiz7.png";
-import interyer8 from "../assets/images/adsiz8.png";
-import interyer9 from "../assets/images/adsiz9.png";
-import interyer10 from "../assets/images/adsiz10.jpg";
+import '../assets/scss/components/_swipper.scss';
 
-const MySwiper = () => {
+import interyer from '../assets/images/Adsiz.png';
+import interyer1 from '../assets/images/adsiz1.png';
+import interyer2 from '../assets/images/adsiz2.png';
+import interyer3 from '../assets/images/adsiz3.png';
+import interyer4 from '../assets/images/adsiz4.png';
+import interyer5 from '../assets/images/adsiz5.png';
+import interyer6 from '../assets/images/adsiz6.png';
+import interyer7 from '../assets/images/adsiz7.png';
+import interyer8 from '../assets/images/adsiz8.png';
+import interyer9 from '../assets/images/adsiz9.png';
+import interyer10 from '../assets/images/adsiz10.jpg';
+import interyer11 from '../assets/images/large.jpg';
+
+
+const images = [
+  interyer, interyer1, interyer2, interyer3, interyer4, interyer5,
+  interyer6, interyer7, interyer8, interyer9, interyer10, interyer11
+];
+
+const Carousel = () => {
   return (
-    <Swiper
-      scrollbar={{ hide: true }}
-      modules={[Scrollbar]}
-      className="mySwiper"
-    ><div className="slider">
-            <SwiperSlide>
-        <img src={interyer} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer1} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer2} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer3} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer4} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer5} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer6} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer7} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer8} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer9} alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={interyer10} alt="" />
-      </SwiperSlide>
+    <div className="carousel">
+      <div
+        className="carousel-inner"
+      >
+        {images.map((img, index) => (
+          <div className="carousel-item" key={index}>
+            <img src={img} alt={`Slide ${index}`} />
+          </div>
+        ))}
+      </div>
     </div>
-      <p className="interier">INTERIOR</p>
-    </Swiper>
   );
 };
 
-export default MySwiper;
+export default Carousel;

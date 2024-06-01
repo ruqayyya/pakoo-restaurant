@@ -1,30 +1,24 @@
-.interier{
-  color: rgba(134,124,110,255);
-  font-size: 50px;
-}
-
-
-.swiper {
-  filter: drop-shadow(10px 7px 10px rgba(134,124,110,255));
-  text-align: center;
-  padding-top: 30px;
-  width: 40%;
-  height: 100%;
-  float: right;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  border-radius: 40px;
-  display: block;
+.carousel {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 700px;
+  margin: auto;
+  overflow:auto;
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item {
+    min-width: 60%;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 90%;
+    display: block;
+  }
+
+
 }
