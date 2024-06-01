@@ -1,12 +1,19 @@
-.homeSection{
-    .container{
-        .row{
-            .Aboutsec{
-                display: flex;
-                width: 100%;
-            
-            }
-
+.homeSection {
+  .container {
+    .row {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .Aboutsec {
+        display: flex;
+        flex-direction: row; /* Ehtiyacınıza uyğun olaraq dəyişdirin (row/column) */
+        justify-content: space-between; /* Dizayn ehtiyacınıza uyğun olaraq tənzimləyin */
+        align-items: center;
+        .Aboutsec > * {
+          flex: 1; /* Dizayn ehtiyacınıza uyğun olaraq tənzimləyin */
+          margin: 10px; /* Aralıq ehtiyacınıza uyğun olaraq tənzimləyin */
         }
+      }
     }
+  }
 }
