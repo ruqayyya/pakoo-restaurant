@@ -1,7 +1,32 @@
-.aboutPart{
-    .about{
-        color: white;
-        // font-size: 50px;
-        
+.aboutPart {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  .about {
+    width: 80%;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--beginner);
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    font-family: var(--beginner);
+    background-color: rgb(76, 103, 76);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+
+    &:hover{
+        filter: var(--shadow);
     }
+  }
 }
