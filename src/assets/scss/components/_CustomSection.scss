@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  background-color: black;
+  background-color: var(--green);
   height: 100vh;
   .container{
     .row {
@@ -10,7 +10,6 @@
     }
   }
 }
-
 
 .flex {
   display: flex;
